@@ -1,0 +1,28 @@
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="evidence.html">Evidence</a>
+    <a href="action.html">Take Action</a>
+    <a href="contact.html">Contact</a>
+    <a href="flyers.html">Flyers</a>
+    <a href="parents.html">Parents</a>
+    <a href="merch.html">Merch</a>
+  </nav>
+
+  <div class="theme-toggle">
+    <label>Theme:
+      <select onchange="setTheme(this.value)">
+        <option value="">Plain</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="strawberry">Strawberry</option>
+      </select>
+    </label>
+  </div>
+</header>
+
+<script>
+  function setTheme(theme) {
+    document.body.className = theme;
+  }
+</script>
