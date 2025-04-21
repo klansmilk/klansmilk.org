@@ -4,9 +4,111 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Klansmilk.org</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --highlight-color: #ffe9e9;
+    }
+    body.chocolate {
+      --bg-color: #1a1a1a;
+      --text-color: #f2f2f2;
+      --highlight-color: #533;
+    }
+    body.strawberry {
+      --bg-color: #fff0f4;
+      --text-color: #440022;
+      --highlight-color: #ffb6c1;
+    }
+    body {
+      font-family: sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    header {
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #0074d9;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    .highlight {
+      font-weight: bold;
+      background: var(--highlight-color);
+      padding: 0.2em 0.4em;
+      border-radius: 0.2em;
+    }
+    .theme-toggle {
+      margin-top: 10px;
+    }
+  </style>
 </head>
-<body style="font-family:sans-serif;text-align:center;padding-top:50px;">
-  <h1>Welcome to Klansmilk.org</h1>
-  <p>Official home of the satirical nutrition awareness campaign.</p>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="evidence.html">Evidence</a>
+      <a href="action.html">Take Action</a>
+      <a href="contact.html">Contact</a>
+      <a href="flyers.html">Flyers</a>
+      <a href="parents.html">Parents</a>
+      <a href="merch.html">Merch</a>
+    </nav>
+    <div class="theme-toggle">
+      <label>Theme:
+        <select onchange="setTheme(this.value)">
+          <option value="">Plain</option>
+          <option value="chocolate">Chocolate</option>
+          <option value="strawberry">Strawberry</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <h1>Milk is Racist.</h1>
+  <p>
+    In the United States, school lunch programs require milk to be offered — and often consumed —
+    with every meal. But what they don't tell you is this:
+    <span class="highlight">up to 80% of Black, Asian, Indigenous, and Latino populations are lactose intolerant</span>,
+    compared to only about 15% of white people.
+  </p>
+
+  <p>
+    Forcing dairy on children who can't digest it isn't nutrition — it's institutional harm disguised as health.
+    We call it <span class="highlight">Klansmilk</span> — because this practice has roots in white supremacist policy,
+    and it continues to hurt kids today.
+  </p>
+
+  <p>
+    It's time to stop pretending that cow milk is for everyone. It's time to demand nondairy alternatives, available to all.
+  </p>
+
+  <p>
+    <strong>Join us. Speak up. Demand change. Serve better milk.</strong>
+  </p>
+
+  <script>
+    function setTheme(theme) {
+      document.body.className = theme;
+    }
+  </script>
 </body>
 </html>
