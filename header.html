@@ -26,3 +26,47 @@
     document.body.className = theme;
   }
 </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klansmilk.org</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --highlight-color: #ffe9e9;
+    }
+    body.chocolate {
+      --bg-color: #1a1a1a;
+      --text-color: #f2f2f2;
+      --highlight-color: #533;
+    }
+    body.strawberry {
+      --bg-color: #fff0f4;
+      --text-color: #440022;
+      --highlight-color: #ffb6c1;
+    }
+    body {
+      font-family: sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    .highlight {
+      font-weight: bold;
+      background: var(--highlight-color);
+      padding: 0.2em 0.4em;
+      border-radius: 0.2em;
+    }
+  </style>
+</head>
